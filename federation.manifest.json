@@ -1,0 +1,29 @@
+{
+  "hostShell": "pulsegrid-shell-host",
+  "angularVersion": "22.2.4",
+  "zonelessSignals": true,
+  "sharedSingletons": [
+    "@angular/core",
+    "@angular/common",
+    "@angular/material",
+    "@angular/cdk",
+    "@pulsegrid/shared-signal-bus"
+  ],
+  "remotes": {
+    "mfe-notification-studio": {
+      "remoteEntry": "http://localhost:4202/remoteEntry.json",
+      "exposedModule": "./NotificationStudioRemote",
+      "version": "22.2.0"
+    },
+    "mfe-finops-telemetry": {
+      "remoteEntry": "http://localhost:4203/remoteEntry.json",
+      "exposedModule": "./FinOpsTelemetryRemote",
+      "version": "22.2.1"
+    },
+    "mfe-incident-war-room": {
+      "remoteEntry": "http://localhost:4204/remoteEntry.json",
+      "exposedModule": "./IncidentWarRoomRemote",
+      "version": "22.2.0"
+    }
+  }
+}
